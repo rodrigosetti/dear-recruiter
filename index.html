@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dear Recruiter</title>
+    </head>
+    <body>
+        <div id="inputs">
+            <input id="input-recruiter" type="text" placeholder="Recruiter" onpaste="setRecruiter();" oninput="setRecruiter();" onkeydown="setRecruiter();"onchange="setRecruiter();">
+            <input id="input-company" type="text" placeholder="Company"     onpaste="setCompany();"   oninput="setCompany();"   onkeydown="setCompany();"  onchange="setCompany();"  >
+        </div>
+        <div id="content">
+            <p>Dear <span id="recruiter"></span>,</p>
+            <p>Truly appreciate your consideration and contacting me about the position at <span id="company"></span>. It seems a great opportunity, but I'm not currently looking for repositioning.</p>
+            <p>Wish you best of luck in your hiring efforts!</p>
+            <p>Most Sincerely,</p>
+        </div>
+
+        <script>
+            var inputRecruiter = document.getElementById("input-recruiter");
+            var inputCompany = document.getElementById("input-company");
+            var recruiter = document.getElementById("recruiter");
+            var company = document.getElementById("company");
+
+            function setRecruiter() {
+                recruiter.innerText = inputRecruiter.value;
+            }
+            function setCompany() {
+                company.innerText = inputCompany.value;
+            }
+        </script>
+    </body>
+</html>
